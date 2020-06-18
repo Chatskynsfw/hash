@@ -26,6 +26,7 @@ var
 
 implementation
    uses MainForm, UInfo;
+   var Hash : THash;
 {$R *.dfm}
 
 procedure TForm3.PeformBtnClick(Sender: TObject);
@@ -38,7 +39,7 @@ begin
    if found then
    begin
      ShowMessage('Запись найдена');
-     ShowInfo(info,Form1.FindMemo.Lines);
+     Hash.ShowInfo(info,Form1.FindMemo.Lines);
    end
    else
      ShowMessage('Записи с такими данными не существует');

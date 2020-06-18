@@ -45,7 +45,7 @@ type
 
 
   implementation
-
+var hash : THash;
     constructor THashTable.Create;
     var i : integer;
     begin
@@ -55,14 +55,19 @@ type
         FTable[i].state := csFree;
       FC:= c;
       FD:= d;
-    end;    destructor THashTable.Destroy;    begin
+    end;
+
+    destructor THashTable.Destroy;
+    begin
       Clear;
       inherited;
-    end;
+    end;
+
     function THashTable.HashF(key: TKey): TIndex;
     begin
-      Result := HF(key) mod N;
-    end;
+      Result := hash.HF(key) mod N;
+    end;
+
     function THashTable.NextCell(a0 : TIndex; var i : integer) : TIndex;
     begin
       Inc(i);
@@ -86,7 +91,7 @@ type
                     d := a;
                     a := NextCell(a0, i);
                   end;
-          csFull: if IsEqualKey(key, FTable[a].info.key) then
+          csFull: if hash.IsEqualKey(key, FTable[a].info.key) then
                     Result := true
                   else
                     a := NextCell(a0, i);
@@ -94,7 +99,8 @@ type
       until Result or Stop or (i = N);
       if not Result and (d <> -1) then
         a := d;
-    end;
+    end;
+
     function THashTable.Add(info: TInfo): Boolean;
     var a : integer;
     begin
@@ -126,14 +132,15 @@ type
       found := (FCount > 0) and IndexOf(key,a);
       if found then
         result := FTable[a].info;
-    end;
+    end;
+
     procedure THashTable.View(strings : TStrings);
     var
       i : integer;
     begin
       for i := 0 to N - 1 do
         if FTable[i].state = csFull then
-          ShowInfo(FTable[i].info,strings);
+          hash.ShowInfo(FTable[i].info,strings);
     end;
 
     function THashTable.LoadFromFile(FileName: string): Boolean;
@@ -146,7 +153,7 @@ type
       Clear;
       Reset(f);
       while not Eof(f) and Result do
-        if GetFromFile(f, info) then
+        if hash.GetFromFile(f, info) then
           Result := Add(info)
         else
           Result := False;
@@ -165,7 +172,7 @@ type
       if FCount>0 then
         for i:= 0 to N-1 do
           if FTable[i].state = csFull then
-            AddToFile(f, FTable[i].info);
+            hash.AddToFile(f, FTable[i].info);
       CloseFile(f);
     end;
 

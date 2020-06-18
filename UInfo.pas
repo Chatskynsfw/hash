@@ -20,27 +20,30 @@ uses System.Sysutils, Classes;
      Adress : TAdress;
    end;
 
- function IsEqualKey (k1, k2 : TKey) : boolean;
- procedure AddToFile(var f : TextFile; info: TInfo);
- function GetFromFile(var f : TextFile; var info : TInfo) : boolean;
- procedure ShowInfo(info : TInfo; Row : TStrings);
- Function HF(key:TKey):integer;
+  THash = class
+  public
+    function IsEqualKey (k1, k2 : TKey) : boolean;
+    procedure AddToFile(var f : TextFile; info: TInfo);
+    function GetFromFile(var f : TextFile; var info : TInfo) : boolean;
+    procedure ShowInfo(info : TInfo; Row : TStrings);
+    function HF(key:TKey):integer;
+  end;
 
 implementation
 
-   function IsEqualKey(k1, k2 : TKey)  : boolean;
+   function THash.IsEqualKey(k1, k2 : TKey)  : boolean;
    begin
      result:= (k1.number = k2.number) and (k1.series = k2.series);
    end;
 
-   procedure AddToFile(var f : TextFile; info: TInfo);
+   procedure THash.AddToFile(var f : TextFile; info: TInfo);
    begin
      writeln(f,info.key.number,' ',info.key.series);
      writeln(f,info.FIO);
      writeln(f,info.Adress.house,' ',info.Adress.street);
    end;
 
-   function GetFromFile(var f : TextFile; var info : TInfo) : boolean;
+   function THash.GetFromFile(var f : TextFile; var info : TInfo) : boolean;
    var c:char;
    begin
      readln(f,info.key.number,info.key.series);
@@ -49,7 +52,7 @@ implementation
      result:= (info.key.number<>0) and (info.key.series<>0) and (info.FIO<>'') and (info.adress.street<>'') and (info.adress.house<>0);
    end;
 
-   Function HF(key:TKey):integer;
+   Function THash.HF(key:TKey):integer;
    var i:integer; str:string;
    begin
      result:=0;
@@ -58,7 +61,7 @@ implementation
        result:=result + ord(str[i])*i;
    end;
 
-   procedure ShowInfo(info : TInfo; Row : TStrings);
+   procedure THash.ShowInfo(info : TInfo; Row : TStrings);
    begin
      with info do
      begin
