@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\79009\Desktop\laba2_8d\MainForm.pas=C:\Users\79009\Desktop\laba2_8d\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.481,C:\Users\79009\Desktop\laba2_8d\AddForm.pas=C:\Users\79009\Desktop\laba2_8d\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.870,=C:\Users\79009\Desktop\laba2_8d\UHashTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.209,=C:\Users\79009\Desktop\laba2_8d\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.161,=C:\Users\79009\Desktop\laba2_8d\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.641,C:\Users\79009\Desktop\laba2_8d\FindForm.dfm=C:\Users\79009\Desktop\laba2_8d\DelForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.938,=C:\Users\79009\Desktop\laba2_8d\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.641,C:\Users\79009\Desktop\laba2_8d\FindForm.pas=C:\Users\79009\Desktop\laba2_8d\DelForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.140,C:\Users\79009\Desktop\laba2_8d\DelForm.pas=C:\Users\79009\Desktop\laba2_8d\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.090,C:\Users\79009\Desktop\laba2_8d\DelForm.pas=C:\Users\79009\Desktop\laba2_8d\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.481,C:\Users\79009\Desktop\laba2_8d\AddForm.dfm=C:\Users\79009\Desktop\laba2_8d\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.407,C:\Users\79009\Desktop\laba2_8d\Unit1.pas=C:\Users\79009\Desktop\laba2_8d\UHashTableGUI.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.871,=C:\Users\79009\Desktop\laba2_8d\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.506,C:\Users\79009\Desktop\laba2_8d\Unit1.pas=C:\Users\79009\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.090,C:\Users\79009\Desktop\laba2_8d\DelForm.dfm=C:\Users\79009\Desktop\laba2_8d\Unit4.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.140,C:\Users\79009\Desktop\laba2_8d\DelForm.dfm=C:\Users\79009\Desktop\laba2_8d\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.477,=C:\Users\79009\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.635,C:\Users\79009\Desktop\laba2_8d\Project2.dproj=C:\Users\79009\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.506,C:\Users\79009\Desktop\laba2_8d\Unit1.dfm=C:\Users\79009\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.544,=C:\Users\79009\Desktop\laba2_8d\UInfo.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\79009\Desktop\laba2_8d\MainForm.dfm=C:\Users\79009\Desktop\laba2_8d\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
